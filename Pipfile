@@ -10,6 +10,8 @@ scikit-learn = "*"
 matplotlib = "*"
 numpy = "*"
 joblib = "*"
+keras = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.6"
