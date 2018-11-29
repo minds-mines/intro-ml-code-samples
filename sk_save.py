@@ -36,6 +36,7 @@ print(f"The best model uses {clf.best_params_} which results in a(n) {metric} sc
 #####################################
 
 # Step 1: Determine model to save
+model = clf.best_estimator_
 
 # Step 2: Save the model
 
