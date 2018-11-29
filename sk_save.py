@@ -42,5 +42,12 @@ model = clf.best_estimator_
 # Step 2: Save the model
 joblib.dump(model, 'models/sk-model.joblib')
 
+#####################################
+# Model Loading
+#####################################
+
+# Step 1: Determine file location
+
+# Step 2: Load model
 
 print(f"The saved model had params {model.get_params()}.")
