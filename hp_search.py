@@ -13,6 +13,9 @@ svc = SVC(random_state=0)
 # We can set a particular hyperparameter for all tests by adding it to the original instantiation
 
 # Step 3: Determine Hyperparameters to test
+parameters = {'kernel': ('linear', 'rbf', "poly"), 'C': [
+    1, 10], 'gamma': ["scale"]}
+# We can set a particular hyperparameter for all tests by adding it as a list with 1 item
 
 # Step 4: Determine evaluation metric
 
