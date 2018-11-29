@@ -3,6 +3,7 @@
 
 from sklearn.datasets import load_iris
 from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
 
 # Step 1: Prepare data
 iris = load_iris()
@@ -21,3 +22,7 @@ parameters = {'kernel': ('linear', 'rbf', "poly"), 'C': [
 metric = "accuracy"
 
 # Step 5: Run search and determine best hyperparameters
+clf = GridSearchCV(svc, parameters, cv=5, scoring=metric)
+clf.fit(iris.data, iris.target)
+
+print(f"The best model uses {clf.best_params_} which results in a(n) {metric} score of {clf.best_score_}.")
