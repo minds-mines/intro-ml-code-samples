@@ -31,3 +31,12 @@ clf.fit(iris.data, iris.target)
 
 print(f"The best model uses {clf.best_params_} which results in a(n) {metric} score of {clf.best_score_}.")
 
+#####################################
+# Model Saving
+#####################################
+
+# Step 1: Determine model to save
+
+# Step 2: Save the model
+
+
