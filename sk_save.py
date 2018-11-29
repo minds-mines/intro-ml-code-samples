@@ -47,7 +47,10 @@ joblib.dump(model, 'models/sk-model.joblib')
 #####################################
 
 # Step 1: Determine file location
+model_file = 'models/sk-model.joblib'
 
 # Step 2: Load model
+loaded_model = joblib.load(model_file)
 
 print(f"The saved model had params {model.get_params()}.")
+print(f"The loaded model has params {loaded_model.get_params()}.")
