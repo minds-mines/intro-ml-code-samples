@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iris Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>Iris Species Predictor</h1>
+
+    <div>
+        <label for="sepal_length">Sepal length</label>
+        <input type="text" id="sepal_length">
+    </div>
+
+    <div>
+        <label for="sepal_width">Sepal width</label>
+        <input type="text" id="sepal_width">
+    </div>
+
+    <div>
+        <label for="petal_length">Petal length</label>
+        <input type="text" id="petal_length">
+    </div>
+
+    <div>
+        <label for="petal_width">Petal width</label>
+        <input type="text" id="petal_width">
+    </div>
+
+    <div>
+        <button id="predictor">Predict Species!</button>
+    </div>
+
+    <p id="message"></p>
+
+<script>
+
+    document.querySelector("#predictor").addEventListener("click", ()=>{
+        // Get the values to send to the API
+        var params = {
+            sepal_length: document.querySelector("#sepal_length").value,
+            sepal_width: document.querySelector("#sepal_width").value,
+            petal_length: document.querySelector("#petal_length").value,
+            petal_width: document.querySelector("#petal_width").value
+        }
+        // Create URL
+        var url = new URL("/iris", window.location.origin, params = params)
+        // Add search params
+        Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+
+        // Get API response
+        fetch(url).then((response)=>{
+            return response.json()
+        }).then((res)=>{
+            console.log(res)
+            // Update the message
+            document.querySelector("#message").innerText = res['message']
+        })
+    })
+
+</script>
+    
+</body>
+</html>

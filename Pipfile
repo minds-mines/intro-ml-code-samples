@@ -12,6 +12,9 @@ numpy = "*"
 joblib = "*"
 keras = "*"
 tensorflow = "*"
+flask = "*"
+opencv-python = "*"
+opencv-contrib-python = "*"
 
 [requires]
 python_version = "3.6"
