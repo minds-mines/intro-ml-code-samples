@@ -4,6 +4,7 @@
 from sklearn.datasets import load_iris
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
+import joblib
 
 #####################################
 # Perform hyperparameter search
@@ -39,5 +40,7 @@ print(f"The best model uses {clf.best_params_} which results in a(n) {metric} sc
 model = clf.best_estimator_
 
 # Step 2: Save the model
+joblib.dump(model, 'models/sk-model.joblib')
 
 
+print(f"The saved model had params {model.get_params()}.")

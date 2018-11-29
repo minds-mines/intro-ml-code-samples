@@ -9,6 +9,7 @@ name = "pypi"
 scikit-learn = "*"
 matplotlib = "*"
 numpy = "*"
+joblib = "*"
 
 [requires]
 python_version = "3.6"
