@@ -18,5 +18,6 @@ parameters = {'kernel': ('linear', 'rbf', "poly"), 'C': [
 # We can set a particular hyperparameter for all tests by adding it as a list with 1 item
 
 # Step 4: Determine evaluation metric
+metric = "accuracy"
 
 # Step 5: Run search and determine best hyperparameters
