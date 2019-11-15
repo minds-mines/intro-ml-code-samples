@@ -1,11 +1,11 @@
 """ Saving and loading keras models
 """
 
-from keras import Sequential
-from keras.datasets import mnist
-from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
-from keras.models import load_model
-from keras.utils import to_categorical
+from tensorflow.keras import Sequential
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
+from tensorflow.keras.models import load_model
+from tensorflow.keras.utils import to_categorical
 
 # Load Dataset
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
