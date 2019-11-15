@@ -1,10 +1,10 @@
 """ Saving and loading keras models
 """
 
-from keras import Sequential
-from keras.datasets import boston_housing
-from keras.layers import Dense
-from keras.models import load_model
+from tensorflow.keras import Sequential
+from tensorflow.keras.datasets import boston_housing
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import load_model
 
 # Load Dataset
 (x_train, y_train), (x_test, y_test) = boston_housing.load_data()
